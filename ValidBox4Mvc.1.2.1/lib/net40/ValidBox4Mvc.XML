@@ -1,0 +1,925 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ValidBox4Mvc</name>
+    </assembly>
+    <members>
+        <member name="T:System.Web.Mvc.ModelStateExtend">
+            <summary>
+            ModelState扩展
+            </summary>
+        </member>
+        <member name="M:System.Web.Mvc.ModelStateExtend.FirstErrorMessage(System.Web.Mvc.ModelState)">
+            <summary>
+            获取ModelState的第一个错误信息
+            </summary>
+            <param name="modelState">modelState</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Web.Mvc.ModelStateExtend.GetErrorMessage(System.Web.Mvc.ModelStateDictionary,System.String)">
+            <summary>
+            获取错误提示信息
+            </summary>
+            <param name="modelStates">ModelStateDictionary</param>
+            <param name="field">字段名</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Web.Mvc.ModelStateExtend.FirstModelError(System.Web.Mvc.ModelStateDictionary)">
+            <summary>
+            获取第一个验证错误信息
+            </summary>
+            <param name="modelStates">ModelStateDictionary</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Web.Mvc.ModelStateExtend.FirstModelErrorMessage(System.Web.Mvc.ModelStateDictionary)">
+            <summary>
+            获取第一个验证错误信息内容
+            </summary>
+            <param name="modelStates">ModelStateDictionary</param>
+            <returns></returns>
+        </member>
+        <member name="T:System.Web.Mvc.Html.ValidBoxExtend">
+            <summary>
+            验证框扩展 
+            </summary>
+        </member>
+        <member name="M:System.Web.Mvc.Html.ValidBoxExtend.Required(ValidBox4Mvc.ValidBox)">
+            <summary>
+            验证必须输入
+            </summary>
+            <param name="box">验证框</param>         
+            <returns></returns>
+        </member>
+        <member name="M:System.Web.Mvc.Html.ValidBoxExtend.Required(ValidBox4Mvc.ValidBox,System.String)">
+            <summary>
+            验证必须输入
+            </summary>
+            <param name="box">验证框</param>
+            <param name="errorMessage">提示信息</param>        
+            <returns></returns>
+        </member>
+        <member name="M:System.Web.Mvc.Html.ValidBoxExtend.Url(ValidBox4Mvc.ValidBox)">
+            <summary>      
+            验证输入是URL
+            </summary>
+            <param name="box">验证框</param>              
+            <returns></returns>
+        </member>
+        <member name="M:System.Web.Mvc.Html.ValidBoxExtend.Url(ValidBox4Mvc.ValidBox,System.String)">
+            <summary>      
+            验证输入是URL
+            </summary>
+            <param name="box">验证框</param>        
+            <param name="errorMessage">提示信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Web.Mvc.Html.ValidBoxExtend.Email(ValidBox4Mvc.ValidBox)">
+            <summary>
+            验证输入是否是Email
+            </summary>
+            <param name="box">验证框</param>    
+            <returns></returns>
+        </member>
+        <member name="M:System.Web.Mvc.Html.ValidBoxExtend.Email(ValidBox4Mvc.ValidBox,System.String)">
+            <summary>
+            验证输入是否是Email
+            </summary>
+            <param name="box">验证框</param>      
+            <param name="errorMessage">提示信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Web.Mvc.Html.ValidBoxExtend.Length(ValidBox4Mvc.ValidBox,System.Int32,System.Int32)">
+            <summary>
+            验证输入的长度
+            </summary>
+            <param name="box">验证框</param>       
+            <param name="minLength">最小长度</param>
+            <param name="maxLength">最大长度</param>       
+            <returns></returns>
+        </member>
+        <member name="M:System.Web.Mvc.Html.ValidBoxExtend.Length(ValidBox4Mvc.ValidBox,System.Int32,System.Int32,System.String)">
+            <summary>
+            验证输入的长度
+            </summary>
+            <param name="box">验证框</param>       
+            <param name="minLength">最小长度</param>
+            <param name="maxLength">最大长度</param>
+            <param name="errorMessage">提示信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Web.Mvc.Html.ValidBoxExtend.MinLength(ValidBox4Mvc.ValidBox,System.Int32)">
+            <summary>
+            验证输入的最小长度
+            </summary>
+            <param name="box">验证框</param>       
+            <param name="length">最小长度</param>      
+            <returns></returns>
+        </member>
+        <member name="M:System.Web.Mvc.Html.ValidBoxExtend.MinLength(ValidBox4Mvc.ValidBox,System.Int32,System.String)">
+            <summary>
+            验证输入的最小长度
+            </summary>
+            <param name="box">验证框</param>       
+            <param name="length">最小长度</param>
+            <param name="errorMessage">提示信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Web.Mvc.Html.ValidBoxExtend.MaxLength(ValidBox4Mvc.ValidBox,System.Int32)">
+            <summary>
+            验证输入的最大长度
+            </summary>
+            <param name="box">验证框</param>       
+            <param name="length">最大长度</param>     
+            <returns></returns>
+        </member>
+        <member name="M:System.Web.Mvc.Html.ValidBoxExtend.MaxLength(ValidBox4Mvc.ValidBox,System.Int32,System.String)">
+            <summary>
+            验证输入的最大长度
+            </summary>
+            <param name="box">验证框</param>       
+            <param name="length">最大长度</param>
+            <param name="errorMessage">提示信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Web.Mvc.Html.ValidBoxExtend.Range(ValidBox4Mvc.ValidBox,System.Double,System.Double)">
+            <summary>
+            验证输入的值的范围
+            </summary>
+            <param name="box">验证框</param>       
+            <param name="minValue">最小值</param>
+            <param name="maxValue">最大值</param>       
+            <returns></returns>
+        </member>
+        <member name="M:System.Web.Mvc.Html.ValidBoxExtend.Range(ValidBox4Mvc.ValidBox,System.Double,System.Double,System.String)">
+            <summary>
+            验证输入的值的范围
+            </summary>
+            <param name="box">验证框</param>       
+            <param name="minValue">最小值</param>
+            <param name="maxValue">最大值</param>
+            <param name="errorMessage">提示信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Web.Mvc.Html.ValidBoxExtend.Range(ValidBox4Mvc.ValidBox,System.Int32,System.Int32)">
+            <summary>
+            验证输入的值的范围
+            </summary>
+            <param name="box">验证框</param>       
+            <param name="minValue">最小值</param>
+            <param name="maxValue">最大值</param>       
+            <returns></returns>
+        </member>
+        <member name="M:System.Web.Mvc.Html.ValidBoxExtend.Range(ValidBox4Mvc.ValidBox,System.Int32,System.Int32,System.String)">
+            <summary>
+            验证输入的值的范围
+            </summary>
+            <param name="box">验证框</param>       
+            <param name="minValue">最小值</param>
+            <param name="maxValue">最大值</param>
+            <param name="errorMessage">提示信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Web.Mvc.Html.ValidBoxExtend.Precision(ValidBox4Mvc.ValidBox,System.Int32,System.Int32)">
+            <summary>
+            验证精度（小数点数）
+            </summary>
+            <param name="box">验证框</param>
+            <param name="min">最小精度</param>
+            <param name="max">最大精度</param>     
+            <returns></returns>
+        </member>
+        <member name="M:System.Web.Mvc.Html.ValidBoxExtend.Precision(ValidBox4Mvc.ValidBox,System.Int32,System.Int32,System.String)">
+            <summary>
+            验证精度（小数点数）
+            </summary>
+            <param name="box">验证框</param>
+            <param name="min">最小精度</param>
+            <param name="max">最大精度</param>
+            <param name="errorMessage">提示信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Web.Mvc.Html.ValidBoxExtend.Match(ValidBox4Mvc.ValidBox,System.String)">
+            <summary>
+            验证和正则表达式是否匹配
+            </summary>
+            <param name="box">验证框</param>        
+            <param name="regexPattern">表达式</param>    
+            <returns></returns>
+        </member>
+        <member name="M:System.Web.Mvc.Html.ValidBoxExtend.Match(ValidBox4Mvc.ValidBox,System.String,System.String)">
+            <summary>
+            验证和正则表达式是否匹配
+            </summary>
+            <param name="box">验证框</param>        
+            <param name="regexPattern">表达式</param>
+            <param name="errorMessage">提示信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Web.Mvc.Html.ValidBoxExtend.NotMatch(ValidBox4Mvc.ValidBox,System.String)">
+            <summary>
+            验证输入和正则表达式不匹配
+            </summary>
+            <param name="box">验证框</param>
+            <param name="regexPattern">表达式</param>     
+            <returns></returns>
+        </member>
+        <member name="M:System.Web.Mvc.Html.ValidBoxExtend.NotMatch(ValidBox4Mvc.ValidBox,System.String,System.String)">
+            <summary>
+            验证输入和正则表达式不匹配
+            </summary>
+            <param name="box">验证框</param>
+            <param name="regexPattern">表达式</param>
+            <param name="errorMessage">提示信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Web.Mvc.Html.ValidBoxExtend.EqualTo(ValidBox4Mvc.ValidBox,System.String)">
+            <summary>
+            验证输入是否和目标ID元素的值相等
+            </summary>
+            <param name="box">验证框</param>      
+            <param name="targetID">目标元素ID</param>    
+            <returns></returns>
+        </member>
+        <member name="M:System.Web.Mvc.Html.ValidBoxExtend.EqualTo(ValidBox4Mvc.ValidBox,System.String,System.String)">
+            <summary>
+            验证输入是否和目标ID元素的值相等
+            </summary>
+            <param name="box">验证框</param>      
+            <param name="targetID">目标元素ID</param>
+            <param name="errorMessage">提示信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Web.Mvc.Html.ValidBoxExtend.NotEqualTo(ValidBox4Mvc.ValidBox,System.String)">
+            <summary>
+            验证输入是否和目标ID元素的值不相等
+            </summary>
+            <param name="box">验证框</param>
+            <param name="targetID">目标元素ID</param>    
+            <returns></returns>
+        </member>
+        <member name="M:System.Web.Mvc.Html.ValidBoxExtend.NotEqualTo(ValidBox4Mvc.ValidBox,System.String,System.String)">
+            <summary>
+            验证输入是否和目标ID元素的值不相等
+            </summary>
+            <param name="box">验证框</param>
+            <param name="targetID">目标元素ID</param>
+            <param name="errorMessage">提示信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Web.Mvc.Html.ValidBoxExtend.Remote(ValidBox4Mvc.ValidBox,System.String,System.String[])">
+            <summary>
+            远程验证输入值
+            不支持后台验证功能
+            </summary>
+            <param name="box">验证框</param>
+            <param name="url">远程地址</param>
+            <param name="targetID">提交的目标元素的ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Web.Mvc.Html.ValidBoxExtend.Number(ValidBox4Mvc.ValidBox)">
+            <summary>
+            验证输入是否为数字类型
+            </summary>
+            <param name="box">验证框</param>       
+            <returns></returns>
+        </member>
+        <member name="M:System.Web.Mvc.Html.ValidBoxExtend.Number(ValidBox4Mvc.ValidBox,System.String)">
+            <summary>
+            验证输入是否为数字类型
+            </summary>
+            <param name="box">验证框</param>
+            <param name="errorMessage">错误提示消息</param>
+            <returns></returns>
+        </member>
+        <member name="T:ValidBox4Mvc.IValidRule">
+            <summary>
+            验证规则接口
+            </summary>
+        </member>
+        <member name="M:ValidBox4Mvc.IValidRule.ToValidBox">
+            <summary>
+            转换为对应的ValidBox类型
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:ValidBox4Mvc.IValidRule.OrderIndex">
+            <summary>
+            排序索引
+            越小越优先
+            </summary>
+        </member>
+        <member name="T:ValidBox4Mvc.ValidRules.EmailAttribute">
+            <summary>
+            表示验证是邮箱格式
+            </summary>
+        </member>
+        <member name="T:ValidBox4Mvc.ValidRuleBase">
+            <summary>
+            验证规则特性基础类
+            </summary>
+        </member>
+        <member name="M:ValidBox4Mvc.ValidRuleBase.ToValidBox">
+            <summary>
+            转换为对应的ValidBox类型
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ValidBox4Mvc.ValidRuleBase.IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)">
+            <summary>
+            根据当前的验证特性来验证指定的值
+            </summary>
+            <param name="value">值</param>
+            <param name="validationContext">上下文</param>
+            <returns></returns>
+        </member>
+        <member name="M:ValidBox4Mvc.ValidRuleBase.IsValid(System.Object)">
+            <summary>
+            返回调用了bool IsValid(string value)方法的结果    
+            </summary>
+            <param name="value">值</param>
+            <returns></returns>
+        </member>
+        <member name="M:ValidBox4Mvc.ValidRuleBase.IsValid(System.String)">
+            <summary>
+            根据当前的验证特性来验证指定的值
+            默认返回true
+            </summary>
+            <param name="value">字符串值</param>
+            <returns></returns>
+        </member>
+        <member name="M:ValidBox4Mvc.ValidRuleBase.FormatErrorMessage(System.String)">
+            <summary>
+            格式化错误提示信息
+            </summary>
+            <param name="name">字段名字</param>
+            <returns></returns>
+        </member>
+        <member name="P:ValidBox4Mvc.ValidRuleBase.ValidationContext">
+            <summary>
+            获取验证上下文
+            </summary>
+        </member>
+        <member name="P:ValidBox4Mvc.ValidRuleBase.ValidType">
+            <summary>
+            获取自身对应的验证类型
+            </summary>
+        </member>
+        <member name="P:ValidBox4Mvc.ValidRuleBase.OrderIndex">
+            <summary>
+            获取或设置排序索引
+            越小越优先
+            </summary>
+        </member>
+        <member name="M:ValidBox4Mvc.ValidRules.EmailAttribute.#ctor">
+            <summary>
+            验证是邮箱格式
+            </summary>
+        </member>
+        <member name="M:ValidBox4Mvc.ValidRules.EmailAttribute.ToValidBox">
+            <summary>
+            转换为对应的ValidBox类型
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ValidBox4Mvc.ValidRules.EmailAttribute.IsValid(System.String)">
+            <summary>
+            后台验证
+            </summary>
+            <param name="value">实体属性的值</param>
+            <returns></returns>
+        </member>
+        <member name="T:ValidBox4Mvc.ValidRules.EqualToAttribute">
+            <summary>
+            表示验证是否和目标ID的值一致
+            </summary>
+        </member>
+        <member name="M:ValidBox4Mvc.ValidRules.EqualToAttribute.#ctor(System.String)">
+            <summary>
+            验证是否和目标ID的值一致
+            </summary>        
+            <param name="targetId">目标id</param>
+        </member>
+        <member name="M:ValidBox4Mvc.ValidRules.EqualToAttribute.ToValidBox">
+            <summary>
+            转换为对应的ValidBox类型
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ValidBox4Mvc.ValidRules.EqualToAttribute.IsValid(System.String)">
+            <summary>
+            后台验证
+            </summary>       
+            <param name="value">属性的值</param>
+            <returns></returns>
+        </member>
+        <member name="P:ValidBox4Mvc.ValidRules.EqualToAttribute.TargetId">
+            <summary>
+            获取或设置目标ID值
+            </summary>
+        </member>
+        <member name="T:ValidBox4Mvc.ValidRules.LengthAttribute">
+            <summary>
+            表示验证输入的长度范围
+            maxLength参数会影响EF-CodeFirst生成的数据库字段最大长度
+            </summary>
+        </member>
+        <member name="M:ValidBox4Mvc.ValidRules.LengthAttribute.#ctor(System.Int32)">
+            <summary>
+            验证输入的长度范围
+            </summary>
+            <param name="maxLength">最大长度</param>
+        </member>
+        <member name="M:ValidBox4Mvc.ValidRules.LengthAttribute.#ctor(System.Int32,System.Int32)">
+            <summary>
+            验证输入的长度范围
+            </summary>       
+            <param name="minLength">最小长度</param>
+            <param name="maxLength">最大长度</param>
+        </member>
+        <member name="M:ValidBox4Mvc.ValidRules.LengthAttribute.ToValidBox">
+            <summary>
+            生成验证框对象
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ValidBox4Mvc.ValidRules.LengthAttribute.FormatErrorMessage(System.String)">
+            <summary>
+            获取错误提示信息
+            </summary>       
+            <returns></returns>
+        </member>
+        <member name="P:ValidBox4Mvc.ValidRules.LengthAttribute.OrderIndex">
+            <summary>
+            排序索引
+            </summary>
+        </member>
+        <member name="T:ValidBox4Mvc.ValidRules.MatchAttribute">
+            <summary>
+            表示验证是否和正则表达式匹配
+            </summary>
+        </member>
+        <member name="M:ValidBox4Mvc.ValidRules.MatchAttribute.#ctor(System.String)">
+            <summary>
+            验证是否和正则表达式匹配
+            </summary>
+            <param name="pattern">正则表达式</param>
+        </member>
+        <member name="M:ValidBox4Mvc.ValidRules.MatchAttribute.ToValidBox">
+            <summary>
+            转换为对应的ValidBox类型
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ValidBox4Mvc.ValidRules.MatchAttribute.IsValid(System.String)">
+            <summary>
+            后台验证
+            </summary>
+            <param name="value">属性值</param>
+            <returns></returns>
+        </member>
+        <member name="P:ValidBox4Mvc.ValidRules.MatchAttribute.RegexPattern">
+            <summary>
+            获取或设置正则表达式
+            </summary>
+        </member>
+        <member name="T:ValidBox4Mvc.ValidRules.MaxLengthAttribute">
+            <summary>
+            表示验证长度不能大于指定值
+            </summary>
+        </member>
+        <member name="M:ValidBox4Mvc.ValidRules.MaxLengthAttribute.#ctor(System.Int32)">
+            <summary>
+            验证长度长度不能大于指定值
+            </summary>
+            <param name="length">长度</param>
+        </member>
+        <member name="M:ValidBox4Mvc.ValidRules.MaxLengthAttribute.ToValidBox">
+            <summary>
+            生成验证框对象
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ValidBox4Mvc.ValidRules.MaxLengthAttribute.IsValid(System.String)">
+            <summary>
+            后台验证
+            </summary>         
+            <param name="value">属性值</param>
+            <returns></returns>
+        </member>
+        <member name="M:ValidBox4Mvc.ValidRules.MaxLengthAttribute.FormatErrorMessage(System.String)">
+            <summary>
+            获取错误提示信息
+            </summary>     
+            <returns></returns>
+        </member>
+        <member name="P:ValidBox4Mvc.ValidRules.MaxLengthAttribute.Length">
+            <summary>
+            获取或设置长度
+            </summary>
+        </member>
+        <member name="T:ValidBox4Mvc.ValidRules.MinLengthAttribute">
+            <summary>
+            表示验证长度不能小于指定值
+            </summary>
+        </member>
+        <member name="M:ValidBox4Mvc.ValidRules.MinLengthAttribute.#ctor(System.Int32)">
+            <summary>
+            验证长度不能小于指定值
+            </summary>
+            <param name="length">最小长度</param>
+        </member>
+        <member name="M:ValidBox4Mvc.ValidRules.MinLengthAttribute.IsValid(System.String)">
+            <summary>
+            后台验证
+            </summary>      
+            <param name="value">属性值</param>
+            <returns></returns>
+        </member>
+        <member name="T:ValidBox4Mvc.ValidRules.NotEqualToAttribute">
+            <summary>
+            表示验证不要和目标ID的值一致
+            </summary>
+        </member>
+        <member name="M:ValidBox4Mvc.ValidRules.NotEqualToAttribute.#ctor(System.String)">
+            <summary>
+            验证不要和目标ID的值一致
+            </summary>       
+            <param name="targetId">目标id</param>
+        </member>
+        <member name="M:ValidBox4Mvc.ValidRules.NotEqualToAttribute.IsValid(System.String)">
+            <summary>
+            后台验证
+            </summary>       
+            <param name="value">属性的值</param>
+            <returns></returns>
+        </member>
+        <member name="T:ValidBox4Mvc.ValidRules.NotMatchAttribute">
+            <summary>
+            表示验证不要和正则表达式匹配
+            </summary>
+        </member>
+        <member name="M:ValidBox4Mvc.ValidRules.NotMatchAttribute.#ctor(System.String)">
+            <summary>
+            验证不要和正则表达式匹配
+            </summary>
+            <param name="pattern">正则表达式</param>
+        </member>
+        <member name="M:ValidBox4Mvc.ValidRules.NotMatchAttribute.IsValid(System.String)">
+            <summary>
+            后台验证
+            </summary>      
+            <param name="value">属性值</param>
+            <returns></returns>
+        </member>
+        <member name="T:ValidBox4Mvc.ValidRules.PrecisionAttribute">
+            <summary>
+            表示精度验证
+            </summary>
+        </member>
+        <member name="M:ValidBox4Mvc.ValidRules.PrecisionAttribute.#ctor(System.Int32,System.Int32)">
+            <summary>
+            表示精度验证
+            </summary>
+        </member>
+        <member name="M:ValidBox4Mvc.ValidRules.PrecisionAttribute.ToValidBox">
+            <summary>
+            转换为对应的ValidBox类型
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ValidBox4Mvc.ValidRules.PrecisionAttribute.IsValid(System.String)">
+            <summary>
+            后台验证
+            </summary>
+            <param name="value">值</param>
+            <returns></returns>
+        </member>
+        <member name="M:ValidBox4Mvc.ValidRules.PrecisionAttribute.FormatErrorMessage(System.String)">
+            <summary>
+            获取错误提示信息
+            </summary>     
+            <returns></returns>
+        </member>
+        <member name="P:ValidBox4Mvc.ValidRules.PrecisionAttribute.Min">
+            <summary>
+            获取或设置最小精度
+            </summary>
+        </member>
+        <member name="P:ValidBox4Mvc.ValidRules.PrecisionAttribute.Max">
+            <summary>
+            获取或设置最大精度
+            </summary>
+        </member>
+        <member name="T:ValidBox4Mvc.ValidRules.RangeAttribute">
+            <summary>
+            表示验值要在一定的区间中
+            支持整型和双精度型验证
+            </summary>
+        </member>
+        <member name="F:ValidBox4Mvc.ValidRules.RangeAttribute.isInteger">
+            <summary>
+            是否为整数
+            </summary>
+        </member>
+        <member name="M:ValidBox4Mvc.ValidRules.RangeAttribute.#ctor(System.Int32,System.Int32)">
+            <summary>
+            验值要在一定的区间中
+            </summary>
+            <param name="minValue">最小值</param>
+            <param name="maxValue">最大值</param>
+        </member>
+        <member name="M:ValidBox4Mvc.ValidRules.RangeAttribute.#ctor(System.Double,System.Double)">
+            <summary>
+            验值要在一定的区间中
+            </summary>
+            <param name="minValue">最小值</param>
+            <param name="maxValue">最大值</param>
+        </member>
+        <member name="M:ValidBox4Mvc.ValidRules.RangeAttribute.ToValidBox">
+            <summary>
+            生成验证框对象
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ValidBox4Mvc.ValidRules.RangeAttribute.IsValid(System.String)">
+            <summary>
+            后台验证
+            </summary>       
+            <param name="value">属性值</param>
+            <returns></returns>
+        </member>
+        <member name="M:ValidBox4Mvc.ValidRules.RangeAttribute.FormatErrorMessage(System.String)">
+            <summary>
+            获取错误提示信息
+            </summary>     
+            <returns></returns>
+        </member>
+        <member name="P:ValidBox4Mvc.ValidRules.RangeAttribute.MinValue">
+            <summary>
+            获取或设置最小值
+            </summary>
+        </member>
+        <member name="P:ValidBox4Mvc.ValidRules.RangeAttribute.MaxValue">
+            <summary>
+            获取或设置最大值
+            </summary>
+        </member>
+        <member name="P:ValidBox4Mvc.ValidRules.RangeAttribute.ValidType">
+            <summary>
+            获取验证类型
+            </summary>
+        </member>
+        <member name="T:ValidBox4Mvc.ValidRules.RemoteAttribute">
+            <summary>
+            表示远程验证
+            </summary>
+        </member>
+        <member name="M:ValidBox4Mvc.ValidRules.RemoteAttribute.#ctor(System.String,System.String[])">
+            <summary>
+            远程验证
+            </summary>
+            <param name="url">远程地址</param>
+            <param name="targetId">要传递的目标标签的Id</param>
+        </member>
+        <member name="M:ValidBox4Mvc.ValidRules.RemoteAttribute.ToValidBox">
+            <summary>
+            生成验证框
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:ValidBox4Mvc.ValidRules.RemoteAttribute.Url">
+            <summary>
+            获取或设置远程地址
+            </summary>
+        </member>
+        <member name="P:ValidBox4Mvc.ValidRules.RemoteAttribute.TargetId">
+            <summary>
+            获取或设置要传递的目标标签的Id
+            </summary>
+        </member>
+        <member name="T:ValidBox4Mvc.ValidRules.RequiredAttribute">
+            <summary>
+            表示要求必须输入
+            此特性影响EF-CodeFirst生成的数据库字段为非空约束
+            </summary>
+        </member>
+        <member name="M:ValidBox4Mvc.ValidRules.RequiredAttribute.#ctor">
+            <summary>
+            要求必须输入
+            </summary>
+        </member>
+        <member name="M:ValidBox4Mvc.ValidRules.RequiredAttribute.ToValidBox">
+            <summary>
+            生成验证框对象
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:ValidBox4Mvc.ValidRules.RequiredAttribute.OrderIndex">
+            <summary>
+            排序索引
+            </summary>
+        </member>
+        <member name="T:ValidBox4Mvc.ValidRules.UrlAttribute">
+            <summary>
+            表示验证是网络地址
+            </summary>
+        </member>
+        <member name="M:ValidBox4Mvc.ValidRules.UrlAttribute.#ctor">
+            <summary>
+            验证是网络地址
+            </summary>
+        </member>
+        <member name="M:ValidBox4Mvc.ValidRules.UrlAttribute.ToValidBox">
+            <summary>
+            生成验证框
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ValidBox4Mvc.ValidRules.UrlAttribute.IsValid(System.String)">
+            <summary>
+            后台验证
+            </summary>       
+            <param name="value">属性的值</param>
+            <returns></returns>
+        </member>
+        <member name="T:ValidBox4Mvc.ValidBox">
+            <summary>
+            输入框验证实体
+            承担C#模型转换为ValidBox.js验证参数功能
+            此类不可继承
+            </summary>
+        </member>
+        <member name="F:ValidBox4Mvc.ValidBox.message">
+            <summary>
+            初始时消息
+            </summary>
+        </member>
+        <member name="F:ValidBox4Mvc.ValidBox.required">
+            <summary>
+            是否为必须输入
+            </summary>
+        </member>
+        <member name="F:ValidBox4Mvc.ValidBox.requiredMessage">
+            <summary>
+            必须输入且无输入时提示语
+            </summary>
+        </member>
+        <member name="F:ValidBox4Mvc.ValidBox.validRuleList">
+            <summary>
+            验证规则
+            </summary>
+        </member>
+        <member name="M:ValidBox4Mvc.ValidBox.#ctor">
+            <summary>
+            验证框        
+            </summary>       
+        </member>
+        <member name="M:ValidBox4Mvc.ValidBox.AsHtmlAttribute">
+            <summary>
+            转换为Html属性对象
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ValidBox4Mvc.ValidBox.AsHtmlAttribute(System.Collections.Generic.IDictionary{System.String,System.Object})">
+            <summary>
+            转换为Html属性对象
+            <param name="attribute">附加的html属性</param>
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ValidBox4Mvc.ValidBox.AsHtmlAttribute(System.Object)">
+            <summary>
+            转换为Html属性对象
+            <param name="attribute">附加的html属性</param>
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ValidBox4Mvc.ValidBox.Empty">
+            <summary>
+            表示生成无规则的空验证框
+            </summary>       
+            <returns></returns>
+        </member>
+        <member name="M:ValidBox4Mvc.ValidBox.Empty(System.String)">
+            <summary>
+            表示生成无规则的空验证框
+            </summary>
+            <param name="message">初始化提示消息</param>
+            <returns></returns>
+        </member>
+        <member name="M:ValidBox4Mvc.ValidBox.Request(System.String)">
+            <summary>
+            表示必须输入的验证框对象
+            </summary>
+            <param name="requiredMessage">未输入时的提示信息</param>
+        </member>
+        <member name="M:ValidBox4Mvc.ValidBox.GenerateRule(System.String,System.String,System.Object[])">
+            <summary>
+            生成验证规则实体
+            </summary>
+            <param name="name">名称</param>
+            <param name="message">消息</param>
+            <param name="parameters">参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:ValidBox4Mvc.ValidBox.New(System.String,System.String,System.Object[])">
+            <summary>
+            表示一般验证框对象
+            <param name="validType">验证类型</param>
+            <param name="validMessage">不通过时提示信息</param>
+            <param name="parameters">验证的参数</param>
+            </summary>
+        </member>
+        <member name="M:ValidBox4Mvc.ValidBox.Merge(ValidBox4Mvc.ValidBox,ValidBox4Mvc.ValidBox)">
+            <summary>
+            验证框合并操作
+            返回合并后的验证框
+            </summary>       
+            <param name="box1">要合并的对象1</param>
+            /// <param name="box2">要合并的对象2</param>
+            <returns></returns>
+        </member>
+        <member name="T:System.Web.Mvc.Html.HtmlHeplerExtend">
+            <summary>
+            Html验证扩展类
+            </summary>
+        </member>
+        <member name="F:System.Web.Mvc.Html.HtmlHeplerExtend.validBoxCached">
+            <summary>
+            缓存
+            </summary>
+        </member>
+        <member name="M:System.Web.Mvc.Html.HtmlHeplerExtend.Valid(System.Web.Mvc.HtmlHelper)">
+            <summary>
+            生成前端验证规则
+            </summary>
+            <param name="html">html助手</param>       
+            <returns></returns>
+        </member>
+        <member name="M:System.Web.Mvc.Html.HtmlHeplerExtend.Valid(System.Web.Mvc.HtmlHelper,System.String)">
+            <summary>
+            生成前端验证规则
+            </summary>
+            <param name="html">html助手</param>   
+            <param name="field">绑定的ModelState字段名</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Web.Mvc.Html.HtmlHeplerExtend.GetPropertyValidBox``2(System.Web.Mvc.HtmlHelper{``0},System.Linq.Expressions.Expression{System.Func{``0,``1}})">
+            <summary>
+            获取表达式对应属性的验证框描述
+            </summary>
+            <typeparam name="T">Model类型</typeparam>
+            <typeparam name="TKey">键</typeparam>
+            <param name="html">Html</param>
+            <param name="keySelector">属性选择表达式</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Web.Mvc.Html.HtmlHeplerExtend.GetPropertyValidBox(System.Reflection.PropertyInfo,System.String)">
+            <summary>
+            获取属性的ValidBox
+            </summary>
+            <param name="property">属性</param>
+            <param name="message">初始化提示消息</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Web.Mvc.Html.HtmlHeplerExtend.IsNumberType(System.Type)">
+            <summary>
+            计算类型是否数值类型
+            </summary>
+            <param name="type">类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Web.Mvc.Html.HtmlHeplerExtend.ValidFor``2(System.Web.Mvc.HtmlHelper{``0},System.Linq.Expressions.Expression{System.Func{``0,``1}})">
+            <summary>
+            依据实体属性的特性生成前端验证规则
+            </summary>
+            <typeparam name="T">Model类型</typeparam>
+            <typeparam name="TKey">键</typeparam>
+            <param name="html">Html</param>
+            <param name="keySelector">属性选择表达式</param>      
+            <returns></returns>
+        </member>
+        <member name="M:System.Web.Mvc.Html.HtmlHeplerExtend.ValidFor``2(System.Web.Mvc.HtmlHelper{``0},System.Linq.Expressions.Expression{System.Func{``0,``1}},System.Object)">
+            <summary>
+            依据实体属性的特性生成前端验证规则
+            </summary>
+            <typeparam name="T">Model类型</typeparam>
+            <typeparam name="TKey">键</typeparam>
+            <param name="html">Html</param>
+            <param name="keySelector">属性选择表达式</param>    
+            <param name="attribute">附加的html属性</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Web.Mvc.Html.HtmlHeplerExtend.ValidFor``2(System.Web.Mvc.HtmlHelper{``0},System.Linq.Expressions.Expression{System.Func{``0,``1}},System.Collections.Generic.IDictionary{System.String,System.Object})">
+            <summary>
+            依据实体属性的特性生成前端验证规则
+            </summary>
+            <typeparam name="T">Model类型</typeparam>
+            <typeparam name="TKey">键</typeparam>
+            <param name="html">Html</param>
+            <param name="keySelector">属性选择表达式</param>    
+            <param name="attribute">附加的html属性</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
